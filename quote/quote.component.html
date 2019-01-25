@@ -11,8 +11,9 @@
             <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
         </div>
         
-        <div class="row" *ngIf="goal.showDescription">
+        <div class="row" *ngIf="goal.showAuthor">
             <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+            
         </div>
     </div>
     
