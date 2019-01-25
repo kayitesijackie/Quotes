@@ -11,10 +11,20 @@ export class QuoteComponent implements OnInit {
     new Quote(1,"My life is my message.","Mahatma Gandhi",0,0,new Date(2017,6,22)),
     new Quote(2,"Be happy for this moment. This moment is your life.","Omar Khayyam",0,0,new Date(2017,6,22)),
     new Quote(3,"Get busy living or get busy dying.","Stephen King",0,0,new Date(2017,6,22)),
-        ];
+        ]
   toggleDetails(index){
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
   }
+  completeQuote(isComplete,index){
+    if (isComplete){
+        this.quotes.splice(index,1);
+        }
+        }
+  
+    constructor() { }
+  
+    ngOnInit() {
+    }
   upvote(index){
     this.quotes[index].upvotes++;
   }
@@ -35,7 +45,5 @@ export class QuoteComponent implements OnInit {
       quote.completeDate = new Date(quote.completeDate)
       this.quotes.push(quote)
    }
-  constructor() { }
-   ngOnInit() {
-  }
+
  }
