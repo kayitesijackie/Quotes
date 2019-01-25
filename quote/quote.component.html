@@ -1,0 +1,20 @@
+<h1>My Quotes</h1>
+<hr>
+<div class="container">
+    <div class="row">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+    <div *ngFor="let quote of quotes;let i = 'index'">
+        <div class="row">
+            
+            <h4 id="{{i}}" appStrikethrough>{{quote.name}} Posted {{quote.notedDate|dateCount|uppercase}} day(s) ago.</h4>
+            <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+        </div>
+        
+        <div class="row" *ngIf="goal.showDescription">
+            <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+        </div>
+    </div>
+    
+</div>
+<p *ngIf='goals.length > 5'>You have too many quotes</p>
