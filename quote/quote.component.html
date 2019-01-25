@@ -4,7 +4,7 @@
     <div class="row">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <div *ngFor="let quote of quotes;let i = 'index'">
+    <div *ngFor='let quote of quotes;let i = index'>
         <div class="row">
             
             <h4 id="{{i}}" appStrikethrough>{{quote.name}} Posted {{quote.notedDate|dateCount|uppercase}} day(s) ago.</h4>
