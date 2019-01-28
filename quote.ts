@@ -1,8 +1,8 @@
 export class Quote {
   
-    public showAuthor:boolean;
-    constructor(public id:number, public name:string, public author:string,public upvotes:number, public downvotes:number, public notedDate:Date){
-      this.showAuthor=false;
+    public showName:boolean;
+    constructor(public id:number, public name:string, public author:string, public upvotes:number, public downvotes:number){
+      this.showName=false;
     }
   
   }
