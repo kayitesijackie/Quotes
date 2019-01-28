@@ -11,10 +11,10 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index){
     this.quotes[index].showName=!this.quotes[index].showName;
   }
-  upvote(index){
+  upvotes(index){
     this.quotes[index].upvotes++;
   }
-  downvote(index){
+  downvotes(index){
     this.quotes[index].downvotes++;
   }
   deleteQuote(isComplete,index){

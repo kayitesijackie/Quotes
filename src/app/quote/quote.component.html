@@ -1,17 +1,20 @@
-<h1>My Quotes</h1>
-<hr>
-<div class="container">
-    
+<div class="container" style="background-color:aqua">
+    <div class="jumbotron">
+        <h1 style="text-align:center; font-size: 50px">Quotes</h1>
+    </div>    
     <div class="row">
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-    <div *ngFor='let quote of quotes;let i = index'>
-        <li id="{{i}}" appStrikethrough>{{quote.name}}</li>
-        <button class="btn btn-primary" (click)='toggleDetails(i)'>Toogle Details</button>
-        <div class="row" *ngIf="quote.showName">
-            <app-quote-details [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> 
+    </div>  
+    <ul>
+        <div *ngFor="let quote of quotes;let i=index" class="items">
+                
+            <button (click)='toggleDetails(i)' class="btn btn-info btn-xs">Toggle Details<i class="fa fa-sort"></i></button>&nbsp;
+            <button (click)='upvote(i)' class="btn btn-primary btn-xs"><i class="fa fa-thumbs-o-up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
+            <button (click)='downvote(i)' class="btn btn-danger btn-xs"><i class="fa fa-thumbs-o-down"></i>{{quote.downvotes}}</button>
+            <li id="{{i}}" appStrikethrough>"{{quote.name}}" <em><strong>Posted {{quote.notedDate|dateCount}} day(s) ago.</strong></em></li>
+            <app-quote-details *ngIf="quote.showName" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
         </div>
-    </div>
+    </ul>
 </div>
-<p *ngIf='quotes.length > 10'>You have too many quotes</p>
 
+<p *ngIf='quotes.length > 10'>You have too many quotes</p>
