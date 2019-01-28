@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
+import {Quote} from './quote'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<app-quote></app-quote>'
 })
-export class AppComponent {
-  title = 'Quotes';
-}
+export class AppComponent {}
