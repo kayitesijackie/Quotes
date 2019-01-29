@@ -6,7 +6,7 @@ This is a website whereby you can create quotes, view and rate quotes with upvot
 #### By **Kayitesi Jackie**
 
 ## Link to site
-
+https://kayitesijackie.github.io/Quotes/
 
 ## Setup/Installation Requirements
 No setup is required/installation is required to access this file
