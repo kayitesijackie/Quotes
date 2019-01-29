@@ -5,4 +5,6 @@ import {Quote} from './quote'
   selector: 'app-root',
   template: '<app-quote></app-quote>'
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'QUOTES';
+}
