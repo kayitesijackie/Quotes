@@ -1,6 +1,6 @@
 <div class="container">
     <div class="jumbotron">
-        <h1>Quotes</h1>
+        <h1>DIFFERENT QUOTES ON LIFE, LOVE AND SUCCESS</h1>
     </div>    
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> 
@@ -10,13 +10,12 @@
             <p appStrikethrough *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.name}}</p>
             <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.name}}</p>
                 
-            <button (click)='toggleDetails(i)' class="btn btn-info btn-xs">Toggle Details<i class="fa fa-sort"></i></button>&nbsp;
-            <button (click)='upvote(i)' class="btn btn-primary btn-xs"><i class="fa fa-thumbs-o-up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
-            <button (click)='downvote(i)' class="btn btn-danger btn-xs"><i class="fa fa-thumbs-o-down"></i>{{quote.downvotes}}</button>
+            <button (click)='toggleDetails(i)' class="btn btn-info btn-xs">Toggle Details</button>
+            <button (click)='upvote(i)' class="btn btn-primary btn-xs">{{quote.upvotes}}</button>
+            <button (click)='downvote(i)' class="btn btn-danger btn-xs">{{quote.downvotes}}</button>
             <li id="{{i}}" appStrikethrough>"{{quote.name}}" <em><strong>Posted {{quote.notedDate|dateCount}} day(s) ago.</strong></em></li>
             <app-quote-details *ngIf="quote.showName" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
         </div>
     </ul>
 </div>
 
-<p *ngIf='quotes.length > 10'>You have too many quotes</p>
