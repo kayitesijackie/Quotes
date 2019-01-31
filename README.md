@@ -15,7 +15,7 @@ No setup is required/installation is required to access this file
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2. and vision studio text editor.
 
 ## Known bugs
-Dates of posts has an issue
+Date of posts has an issue
 
 ## Support and Contact details
 Incase of any enquires reach me at:kayitesijacqueline@gmail.com
