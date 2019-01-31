@@ -7,13 +7,17 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes =[]
+  quotes =[
+    new Quote(1,'The brain is wider than the sky', 'Emily Dickinson', new Date(2019,3,14)),
+    new Quote(2,'Great things never came from comfort zones', 'Neil Strauss',new Date(2019,6,9)),
+    new Quote (3, 'Your labor is your contribution to the miracle','Elizabeth Gilbert', new Date(2019,6,9))
+  ]
   preNum:number
   lastNum:number
   counter:number
 
   toggleDetails(index){
-    this.quotes[index].showName=!this.quotes[index].showName;
+    this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
   }
   upvotes(index){
     this.quotes[index].upvotes++;

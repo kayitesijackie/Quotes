@@ -4,7 +4,7 @@
             <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
                 
                 <div class="form-group">
-
+                    
                     <label for="name">Enter the Quote here:</label>
                     <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel"required></textarea>
                     <div [hidden]="name.valid || name.pristine" class="alert alert-danger">

@@ -6,5 +6,5 @@ import {Quote} from './quote'
   template: '<app-quote></app-quote>'
 })
 export class AppComponent {
-  quotes = [new Quote(1,"","",0,0,new Date())]
+  // quotes = [new Quote(1,"","",new Date())]
 }
