@@ -1,3 +1,34 @@
+
 <p class="details">Said by <strong><em>{{quote.author}}</em></strong></p>
 <p><em><strong>Posted {{quote.notedDate|dateCount}} day(s) ago.</strong></em></p>
+<div class="four wide column center aligned votes">
+    <div class="ui statistic">
+          
+       <div class="label">
+         Votes:
+       </div>
+
+     </div>
+
+   </div>
+
+   <div class="twelve wide column">
+
+     <ul class="ui big horizontal list voters">
+       <li class="item">
+         <a href (click)="likeVote()">
+         <i class="arrow up icon"></i>
+           upvote: {{ upvotes }}
+         </a>
+       </li>
+
+       <li class="item">
+         <a href (click)="dislikeVote()">
+         <i class="arrow down icon"></i>
+           downvote: {{ downvotes }}
+         </a>
+       </li>
+
+     </ul>
+</div>
 <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button>
